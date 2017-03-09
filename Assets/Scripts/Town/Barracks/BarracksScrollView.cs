@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Collections.Generic;
 
 public class BarracksScrollView : MonoBehaviour {
 
@@ -6,8 +7,8 @@ public class BarracksScrollView : MonoBehaviour {
     public Player player;
 
 	// Use this for initialization
-	void Start () {
-	
+	void OnEnable ()
+    {
         foreach (Employee emp in player.Staff)
 		{
 			GameObject go = Instantiate(Button_Template) as GameObject;

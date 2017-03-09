@@ -7,6 +7,11 @@ public class BarracksScrollButton : MonoBehaviour {
 	public Text ButtonText;
 	public BarracksScrollView scrollView;
 
+    void OnDisable()
+    {
+        Destroy(this.gameObject);
+    }
+
 	public void SetName(Employee emp)
 	{
 		Emp = emp;
